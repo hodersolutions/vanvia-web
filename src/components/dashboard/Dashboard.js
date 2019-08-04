@@ -1,16 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import HorizontalSidebar from '../sidebar/SideBar';
 
 class Dashboard extends Component {	
 	render() {
-		if(this.props.user.is_authenticated === false) {
+		if(this.props.user.is_authenticated === true) {
 			return <Redirect to='/signin'/>;
 		}
 		else {	
 			return (
 				<Fragment>
-					Dashboard
+					<HorizontalSidebar />
 				</Fragment>
 			)
 		}
