@@ -37,7 +37,7 @@ class Register extends Component {
 					<div className="container">
 						<div className="signup-content">
 							<div className="signup-form">
-								<h2 className="form-title">Sign up</h2>
+								<h2 className="form-title">Join us</h2>
 								<form method="POST" className="register-form" id="register-form">
 									<div className="form-group">
 										<label htmlFor="name"><i className="vanvia vanvia-account material-icons-name"></i></label>
@@ -65,7 +65,7 @@ class Register extends Component {
 								</form>
 							</div>
 							<div className="signup-image">
-								<figure><img src="images/signup-image.png" alt="Register"/></figure>
+								<figure><img src="images/signup-image.PNG" alt="Register"/></figure>
 								<a href="/signin" className="signup-image-link">I am already member</a>
 							</div>
 						</div>

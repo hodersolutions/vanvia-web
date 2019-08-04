@@ -37,7 +37,7 @@ class SignIn extends Component {
 					<div className = "container">
 						<div className = "signin-content">
 							<div className = "signin-image">
-								<figure><img src="images/signin-image.jpg" alt="SignIn"/></figure>
+								<figure><img src="images/signin-image.PNG" alt="SignIn"/></figure>
 								<a href="/register" className = "signup-image-link">Create an account</a>
 						</div>
 	
