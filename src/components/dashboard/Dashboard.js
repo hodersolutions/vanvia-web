@@ -1,13 +1,19 @@
 import React, { Component, Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Dashboard extends Component {	
 	render() {
-		return (
-			<Fragment>
-				Dashboard
-			</Fragment>
-		)
+		if(this.props.user.is_authenticated === false) {
+			return <Redirect to='/signin'/>;
+		}
+		else {	
+			return (
+				<Fragment>
+					Dashboard
+				</Fragment>
+			)
+		}
 	}
 }
 
