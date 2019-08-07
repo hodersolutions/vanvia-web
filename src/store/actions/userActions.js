@@ -21,7 +21,7 @@ export const updateUser = (user) => {
 export const createUser = (user) => {
     return (dispatch, getState) => {
         dispatch({ type: USER_SHOW_LOADING });           
-        axios.post(settings.QUESTIONBANKAPI.url + 'api/v1/users', {
+        axios.post(settings.VANVIAAPI.url + 'api/v1/users', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'text/plain'                    
@@ -29,6 +29,7 @@ export const createUser = (user) => {
                 mode: 'cors',
                 username: user.username,
                 email: user.email,
+                uid: user.email,
                 password: user.password
             }
         ).then( response => {                
@@ -40,11 +41,33 @@ export const createUser = (user) => {
     }
 }
 
+export const registerUser = (user) => {
+    return (dispatch, getState) => {
+        dispatch({ type: USER_SHOW_LOADING });
+        axios.post(settings.VANVIAAPI.url + 'api/v1/register', {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'text/plain'
+                },
+                mode: 'cors',
+                email: user.email,
+                uid: user.email,
+                password: user.password
+            }
+        ).then( response => {
+                dispatch({ type: CREATE_USER_SUCCESS, response: response.data });
+            }
+        ).catch(error => {
+            dispatch({ type: CREATE_USER_ERROR, error });
+        });
+    }
+}
+
 export const getUser = () => {
     return (dispatch, getState) => {
         dispatch({ type: USER_SHOW_LOADING });   
         const jwt = JWT.get_jwt();
-        axios.get(settings.QUESTIONBANKAPI.url + 'api/v1/users/username?username=' + jwt['username'], {
+        axios.get(settings.VANVIAAPI.url + 'api/v1/users/username?username=' + jwt['username'], {
             headers: {
                 'Content-Type': 'application/json',
                 token: jwt['token'],
@@ -63,13 +86,14 @@ export const getUser = () => {
 export const authenticateUser = (user) => {
     return (dispatch, getState) => {
         dispatch({ type: USER_SHOW_LOADING });        
-        axios.post(settings.QUESTIONBANKAPI.url + 'api/v1/auth/login', {
+        axios.post(settings.VANVIAAPI.url + 'api/v1/login', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'text/plain'
                 },
                 mode: 'cors',
                 email: user.email,
+                uid: user.email,
                 password: user.password
             }
         ).then( response => {
@@ -100,7 +124,7 @@ export const signOutUser = (auth) => {
 export const validateToken = (auth) => {
     return (dispatch, getState) => { 
         dispatch({ type: USER_SHOW_LOADING });       
-        axios.post(settings.QUESTIONBANKAPI.url + 'api/v1/token/validate', {
+        axios.post(settings.VANVIAAPI.url + 'api/v1/token/validate', {
             headers: {
                 'Content-Type': 'application/json',
                 token: auth['token'],

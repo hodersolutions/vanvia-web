@@ -7,7 +7,13 @@ export const settings = {
         username: "",
         password: "",
         domain: ''
-    }    
+    },
+    VANVIAAPI: {
+        url: "https://vanvia-api.herokuapp.com/",
+        username: "",
+        password: "",
+        domain: ''
+    }
 };
 
 export default settings;
