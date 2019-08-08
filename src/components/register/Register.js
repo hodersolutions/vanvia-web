@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createUser } from '../../store/actions/userActions';
+import { registerUser } from '../../store/actions/userActions';
 
 class Register extends Component {	
     constructor() {
@@ -22,7 +22,7 @@ class Register extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();		
-		this.props.createUser({
+		this.props.registerUser({
 			email: this.state.email,
 			password: this.state.password
 		});
@@ -38,18 +38,18 @@ class Register extends Component {
 						<div className="signup-content">
 							<div className="signup-form">
 								<h2 className="form-title">Join us</h2>
-								<form method="POST" className="register-form" id="register-form">
+								<form method="POST" onSubmit={this.handleSubmit} className="register-form" id="register-form">
 									<div className="form-group">
 										<label htmlFor="name"><i className="vanvia vanvia-account material-icons-name"></i></label>
 										<input type="text" name="name" id="name" placeholder="Your Name"/>
 									</div>
 									<div className="form-group">
 										<label htmlFor="email"><i className="vanvia vanvia-email"></i></label>
-										<input type="email" name="email" id="email" placeholder="Your Email"/>
+										<input type="text" name="email" id="email" placeholder="Your Email/UID" value={this.state.email} onChange={this.handleChange}/>
 									</div>
 									<div className="form-group">
 										<label htmlFor="pass"><i className="vanvia vanvia-lock"></i></label>
-										<input type="password" name="pass" id="pass" placeholder="Password"/>
+										<input type="password" name="password" id="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
 									</div>
 									<div className="form-group">
 										<label htmlFor="re-pass"><i className="vanvia vanvia-lock-outline"></i></label>
@@ -84,7 +84,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        createUser: (user) => dispatch(createUser(user))
+        registerUser: (user) => dispatch(registerUser(user))
     }
 }
 
