@@ -12,11 +12,12 @@ import { CREATE_USER_SUCCESS,
 const initState = {
     response: null,
     status: '',
+    response_status: null,
     users: [],
     current_user: null,
     error: null,
     loading: false,    
-    token: null,
+    access_token: null,
     username: null,
     is_authenticated: false
 }
@@ -31,7 +32,7 @@ const userReducer = (state = initState, action) => {
         case SIGNOUT_USER:
             return {
                 ...state,
-                token: null,
+                access_token: null,
                 username: null,
                 is_authenticated: false,
                 status: SIGNOUT_USER,
@@ -40,12 +41,13 @@ const userReducer = (state = initState, action) => {
         case AUTHENTICATE_USER_SUCCESS:
             return {
                 ...state,
-                token: action.response['auth_token'],
+                access_token: action.response['access_token'],
                 username: action.response['username'],
                 current_user: action.response['user'],
                 loading: false,
                 is_authenticated: true,
-                status: AUTHENTICATE_USER_SUCCESS
+                status: AUTHENTICATE_USER_SUCCESS,
+                response_status: action.response['status']
             }
         case AUTHENTICATE_USER_ERROR:
             return {
@@ -59,7 +61,8 @@ const userReducer = (state = initState, action) => {
                 ...state,
                 loading: false,
                 status: CREATE_USER_SUCCESS,
-                response: action.response
+                response: action.response,
+                response_status: action.response['status']
             }            
         case CREATE_USER_ERROR:
             return {

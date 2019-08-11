@@ -31,6 +31,9 @@ class Register extends Component {
 		if(this.props.user.is_authenticated === true) {
 			return <Redirect to='/'/>;
 		}
+		else if(this.props.user.response_status === "success") {
+			return <Redirect to='/signin'/>;
+		}
 		else {			
 			return (
 				<section className="signup">

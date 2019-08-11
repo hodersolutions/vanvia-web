@@ -70,7 +70,7 @@ export const getUser = () => {
         axios.get(settings.VANVIAAPI.url + 'api/v1/users/username?username=' + jwt['username'], {
             headers: {
                 'Content-Type': 'application/json',
-                token: jwt['token'],
+                access_token: jwt['access_token'],
                 username: jwt['username']
             },
             mode: 'cors'
@@ -98,8 +98,8 @@ export const authenticateUser = (user) => {
             }
         ).then( response => {
             if(response.data['status'] === 'success') {
-                // Ask user if he/she is okay to save local cookies then save the token to localStorage by 
-                // JWT.set_jwt(response.data['auth_token'], response.data['username'])
+                // Ask user if he/she is okay to save local cookies then save the access_token to localStorage by 
+                // JWT.set_jwt(response.data['access_token'], response.data['username'])
                 dispatch({ type: AUTHENTICATE_USER_SUCCESS, response: response.data });
             }
             else {
@@ -124,17 +124,17 @@ export const signOutUser = (auth) => {
 export const validateToken = (auth) => {
     return (dispatch, getState) => { 
         dispatch({ type: USER_SHOW_LOADING });       
-        axios.post(settings.VANVIAAPI.url + 'api/v1/token/validate', {
+        axios.post(settings.VANVIAAPI.url + 'api/v1/access_token/validate', {
             headers: {
                 'Content-Type': 'application/json',
-                token: auth['token'],
+                access_token: auth['access_token'],
                 username: auth['username']
             },
             mode: 'cors',
             username: auth['username']
         }).then( response => {
             if(response.data['status'] === 'success') {
-                response.data['auth_token'] = auth['token'];
+                response.data['access_token'] = auth['access_token'];
                 response.data['username'] = auth['username']; 
                 dispatch({ type: AUTHENTICATE_USER_SUCCESS, response: response.data });
             }                                            

@@ -6,9 +6,9 @@ import './HomejQuery.js';
 import SideBar from './sidebar/SideBar';
 import Main from './main/Main';
 
-class Dashboard extends Component {	
+class Home extends Component {	
 	render() {
-		if(this.props.user.is_authenticated === true) {
+		if(this.props.user.is_authenticated === false) {
 			return <Redirect to='/signin'/>;
 		}
 		else {	
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps, null)(Dashboard);
+export default connect(mapStateToProps, null)(Home);
