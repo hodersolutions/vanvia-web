@@ -2,6 +2,8 @@ import { CREATE_USER_SUCCESS,
          CREATE_USER_ERROR, 
          GET_USER_SUCCESS,
          GET_USER_ERROR,
+         GET_USER_MENU_SUCCESS,
+         GET_USER_MENU_ERROR,
          UPDATE_USER_SUCCESS, 
          DELETE_USER_SUCCESS, 
          USER_SHOW_LOADING,
@@ -14,6 +16,7 @@ const initState = {
     status: '',
     response_status: null,
     users: [],
+    menu: null,
     current_user: null,
     error: null,
     loading: false,    
@@ -85,6 +88,20 @@ const userReducer = (state = initState, action) => {
                 loading: false,
                 entity: action.error,
                 status: GET_USER_ERROR
+            }
+        case GET_USER_MENU_SUCCESS:
+            return {                                
+                ...state,
+                loading: false,
+                menu: action.response,
+                status: GET_USER_MENU_SUCCESS
+            }
+        case GET_USER_MENU_ERROR:
+            return {
+                ...state,                
+                loading: false,
+                entity: action.error,
+                status: GET_USER_MENU_ERROR
             }
         case UPDATE_USER_SUCCESS:
             return {

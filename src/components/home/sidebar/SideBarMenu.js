@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getMenu } from '../../../store/actions/userActions';
 
 class SideBarMenu extends Component {
+    componentDidMount() {
+        this.props.getMenu({
+			uid: this.props.user.current_user["uid"],
+            role_keyword: this.props.user.current_user["roles"][0]["keyword"],
+            access_token: this.props.user.access_token
+		});
+    }
     render() {
         return (
             <div className="sidebar-menu">
@@ -143,4 +152,16 @@ class SideBarMenu extends Component {
     }
 }
 
-export default SideBarMenu;
+const mapStateToProps = (state) => {
+	return {
+		user: state.user	
+	}
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getMenu: (data) => dispatch(getMenu(data))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideBarMenu);

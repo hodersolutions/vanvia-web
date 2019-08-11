@@ -6,6 +6,8 @@ import { CREATE_USER_SUCCESS,
          CREATE_USER_ERROR,
          GET_USER_ERROR,
          GET_USER_SUCCESS,
+         GET_USER_MENU_SUCCESS,
+         GET_USER_MENU_ERROR,
          UPDATE_USER_SUCCESS,
          AUTHENTICATE_USER_ERROR,
          AUTHENTICATE_USER_SUCCESS,
@@ -79,6 +81,27 @@ export const getUser = () => {
         }
         ).catch(error => {			
             dispatch({ type: GET_USER_ERROR, error });
+        });
+    }
+}
+
+export const getMenu = (data) => {
+    return (dispatch, getState) => {
+        dispatch({ type: USER_SHOW_LOADING });   
+        // const jwt = JWT.get_jwt();
+        axios.get(settings.VANVIAAPI.url + 'api/v1/config/menu', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'bearer ' + data.access_token,
+                'uid': data.uid,
+                'role_keyword': data.role_keyword
+            },
+            mode: 'cors'
+        }).then( response => {
+            dispatch({ type: GET_USER_MENU_SUCCESS, response: response.data["menu"] });
+        }
+        ).catch(error => {			
+            dispatch({ type: GET_USER_MENU_ERROR, error });
         });
     }
 }
