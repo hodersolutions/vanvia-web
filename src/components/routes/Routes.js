@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Dashboard from "../dashboard/Dashboard";
+import Dashboard from "../layout/dashboard/Dashboard";
 import NotFound from '../common/notfound/NotFound';
 import SignIn from '../signin/SignIn';
 import Register from '../register/Register';
