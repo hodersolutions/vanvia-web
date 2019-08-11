@@ -2,13 +2,36 @@ import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Home.css';
-import './HomejQuery.js';
+import $ from 'jquery';
 import SideBar from './sidebar/SideBar';
 import Main from './main/Main';
 
-class Home extends Component {	
+class Home extends Component {
+	componentDidMount() {
+		$(function ($) {
+			$(".sidebar-dropdown > a").click(function() {
+				$(".sidebar-submenu").slideUp(200);
+				if ($(this).parent().hasClass("active")) {
+					$(".sidebar-dropdown").removeClass("active");
+					$(this).parent().removeClass("active");
+				} else {
+					$(".sidebar-dropdown").removeClass("active");
+					$(this).next(".sidebar-submenu").slideDown(200);
+					$(this).parent().addClass("active");
+				}
+			});
+		
+			$("#close-sidebar").click(function() {
+				$(".page-wrapper").removeClass("toggled");
+			});
+		
+			$("#show-sidebar").click(function() {
+				$(".page-wrapper").addClass("toggled");
+			});   
+		});
+	}	
 	render() {
-		if(this.props.user.is_authenticated === true) {
+		if(this.props.user.is_authenticated === false) {
 			return <Redirect to='/signin'/>;
 		}
 		else {	
