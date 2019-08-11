@@ -8,7 +8,7 @@ import Main from './main/Main';
 
 class Home extends Component {	
 	render() {
-		if(this.props.user.is_authenticated === false) {
+		if(this.props.user.is_authenticated === true) {
 			return <Redirect to='/signin'/>;
 		}
 		else {	

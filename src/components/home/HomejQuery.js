@@ -2,7 +2,6 @@ import $ from 'jquery';
 
 $(function ($) {
     $(".sidebar-dropdown > a").click(function() {
-		alert("hi");
 		$(".sidebar-submenu").slideUp(200);
 		if ($(this).parent().hasClass("active")) {
 			$(".sidebar-dropdown").removeClass("active");
