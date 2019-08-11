@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Dashboard from "../layout/dashboard/Dashboard";
+import Home from "../home/Home";
 import NotFound from '../common/notfound/NotFound';
 import SignIn from '../signin/SignIn';
 import Register from '../register/Register';
@@ -9,7 +9,7 @@ import Register from '../register/Register';
 const Routes = () => (
 	<div className='style'>
 		<Switch>
-			<Route exact path='/' component={Dashboard} />
+			<Route exact path='/' component={Home} />
 			<Route exact path='/signin' component={SignIn} />
 			<Route exact path='/register' component={Register} />
 

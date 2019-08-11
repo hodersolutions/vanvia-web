@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import '../Layout.css';
-import '../Layout.js';
-import SideBar from '../sidebar/SideBar';
-import Main from '../main/Main';
+import './Home.css';
+import './HomejQuery.js';
+import SideBar from './sidebar/SideBar';
+import Main from './main/Main';
 
 class Dashboard extends Component {	
 	render() {
