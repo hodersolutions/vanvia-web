@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SideBarFooter extends Component {
     render() {
         return (
             <div className="sidebar-footer">
-                <a href="/">
+                <Link to="/notifications">
                     <i className="fa fa-bell"></i>
                     <span className="badge badge-pill badge-warning notification">3</span>
-                </a>
-                <a href="/">
+                </Link>
+                <Link to="/inbox">
                     <i className="fa fa-envelope"></i>
                     <span className="badge badge-pill badge-success notification">7</span>
-                </a>
-                <a href="/">
+                </Link>
+                <Link to="/settings">
                     <i className="fa fa-cog"></i>
                     <span className="badge-sonar"></span>
-                </a>
-                <a href="/">
+                </Link>
+                <Link to="/signout">
                     <i className="fa fa-power-off"></i>
-                </a>
+                </Link>
             </div>
         )
     }

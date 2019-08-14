@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { authenticateUser } from '../../store/actions/userActions';
 
@@ -38,7 +38,7 @@ class SignIn extends Component {
 						<div className = "signin-content">
 							<div className = "signin-image">
 								<figure><img src="images/signin-image.PNG" alt="SignIn"/></figure>
-								<a href="/register" className = "signup-image-link">Create an account</a>
+								<Link to="/register" className = "signup-image-link">Create an account</Link>
 						</div>
 	
 						<div className = "signin-form">
@@ -63,9 +63,9 @@ class SignIn extends Component {
 							<div className = "social-login">
 								<span className = "social-label">Or login with</span>
 								<ul className = "socials">
-									<li><a href="https://www.facebook.com"><i className = "display-flex-center vanvia vanvia-facebook"></i></a></li>
-									<li><a href="https://www.twitter.com"><i className = "display-flex-center vanvia vanvia-twitter"></i></a></li>
-									<li><a href="https://www.google.com"><i className = "display-flex-center vanvia vanvia-google"></i></a></li>
+									<li><Link to="https://www.facebook.com"><i className = "display-flex-center vanvia vanvia-facebook"></i></Link></li>
+									<li><Link to="https://www.twitter.com"><i className = "display-flex-center vanvia vanvia-twitter"></i></Link></li>
+									<li><Link to="https://www.google.com"><i className = "display-flex-center vanvia vanvia-google"></i></Link></li>
 								</ul>
 							</div>
 						</div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../../store/actions/userActions';
 
@@ -60,7 +60,7 @@ class Register extends Component {
 									</div>
 									<div className="form-group">
 										<input type="checkbox" name="agree-term" id="agree-term" className="agree-term" />
-										<label htmlFor="agree-term" className="label-agree-term"><span><span></span></span>I agree all statements in  <a href="/" className="term-service">Terms of service</a></label>
+										<label htmlFor="agree-term" className="label-agree-term"><span><span></span></span>I agree all statements in  <Link to="/" className="term-service">Terms of service</Link></label>
 									</div>
 									<div className="form-group form-button">
 										<input type="submit" name="signup" id="signup" className="form-submit" value="Register"/>
@@ -69,7 +69,7 @@ class Register extends Component {
 							</div>
 							<div className="signup-image">
 								<figure><img src="images/signup-image.PNG" alt="Register"/></figure>
-								<a href="/signin" className="signup-image-link">I am already member</a>
+								<Link to="/signin" className="signup-image-link">I am already member</Link>
 							</div>
 						</div>
 					</div>
