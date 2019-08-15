@@ -59,15 +59,7 @@ class SignIn extends Component {
 								<div className = "form-group form-button">
 									<input type="submit" name="signin" id="signin" className = "form-submit" value="Log in"/>
 								</div>
-							</form>
-							<div className = "social-login">
-								<span className = "social-label">Or login with</span>
-								<ul className = "socials">
-									<li><Link to="https://www.facebook.com"><i className = "display-flex-center vanvia vanvia-facebook"></i></Link></li>
-									<li><Link to="https://www.twitter.com"><i className = "display-flex-center vanvia vanvia-twitter"></i></Link></li>
-									<li><Link to="https://www.google.com"><i className = "display-flex-center vanvia vanvia-google"></i></Link></li>
-								</ul>
-							</div>
+							</form>							
 						</div>
 					</div>
 				</div>
