@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import InstituteHeader from './InstituteHeader';
 
 class Main extends Component {
     render() {
         return (
-            <main className="page-content">
+            <main className="page-content">                
                 <div className="container-fluid">
-                    <h2>VanVia Application Content</h2>
+                    <InstituteHeader />
                     <hr/>
                     <div className="row">
                         <div className="form-group col-md-12">

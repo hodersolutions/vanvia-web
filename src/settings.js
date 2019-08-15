@@ -14,7 +14,8 @@ export const settings = {
         password: "",
         domain: ''
     },
-    productName: "academe"
+    productName: "academe",
+    instituteName: "Whatever Institute"
 };
 
 export default settings;
