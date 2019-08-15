@@ -38,7 +38,7 @@ class SideBarDropDown extends Component {
     	return (
       		<Fragment>
 			  	<li className="sidebar-dropdown">
-                    <Link className={ this.props.header } to="#">
+                    <Link className={ this.props.header } to="#">						
                     	<i className={ CSS_CLASS[this.props.header] }></i>
                     	<span>{this.props.header}</span>
                     </Link>

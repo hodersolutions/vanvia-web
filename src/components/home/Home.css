@@ -110,7 +110,7 @@
     top: 0;
     left: -300px;
     z-index: 999; 
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../static/images/sidebar/sidebar_8.jpg") !important;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../static/images/sidebar/sidebar_4.jpg") !important;
   }
   
   .sidebar-wrapper ul {
@@ -269,7 +269,7 @@
   }
   
   .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
-    content: "\f111";
+    content: "\f152";
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
     font-style: normal;
@@ -279,7 +279,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-right: 10px;
-    font-size: 8px;
+    font-size: 10px;
   }
   
   .sidebar-wrapper .sidebar-menu ul li a span.label,
@@ -428,9 +428,20 @@
   .chiller-theme .sidebar-wrapper .sidebar-brand>a,
   .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
   .chiller-theme .sidebar-footer>a {
-      color: #B2BABB /* #818896 */;
+      color: #B2BABB /* #818896 */;      
   }
   
+  .chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-role,
+  .chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-status,
+  .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
+  .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text,
+  .chiller-theme .sidebar-wrapper .sidebar-brand>span,
+  .chiller-theme .sidebar-wrapper .sidebar-menu ul li span,
+  .chiller-theme .sidebar-footer>span {
+      color: #B2BABB /* #818896 */;
+      text-transform: capitalize;
+  }
+
   .chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover>a,
   .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active>a,
   .chiller-theme .sidebar-wrapper .sidebar-header .user-info,
@@ -464,6 +475,8 @@
   
   .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
       color: #B2BABB /* #6c7b88 */;
+      font-size: 15px;
+      margin-bottom: 15px;
   }
   
   .chiller-theme .sidebar-footer {

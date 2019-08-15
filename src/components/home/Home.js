@@ -22,7 +22,7 @@ class Home extends Component {
 						</div>
 						<SideBar />
 						<Main />
-					</div>				
+					</div>
       			</Fragment>
 			)
 		}
