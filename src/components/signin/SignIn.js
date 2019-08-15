@@ -7,7 +7,7 @@ class SignIn extends Component {
     constructor() {
 		super();
 		this.state = {
-			email: '',
+			uid: '',
 			password: ''
 		}
 		this.handleChange = this.handleChange.bind(this);
@@ -23,7 +23,7 @@ class SignIn extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();		
 		this.props.authenticateUser({
-			email: this.state.email,
+			uid: this.state.uid,
 			password: this.state.password
 		});
 	}
@@ -45,8 +45,8 @@ class SignIn extends Component {
 							<h2 className = "form-title">Sign in</h2>
 							<form method="POST" action="" onSubmit={this.handleSubmit} className = "register-form" id="login-form">
 								<div className = "form-group">
-									<label htmlFor = "email"><i className = "vanvia vanvia-account material-icons-name"></i></label>
-									<input placeholder="Email Address" type="text" name="email" id="email" value={this.state.email} onChange={this.handleChange}/>
+									<label htmlFor = "uid"><i className = "vanvia vanvia-account material-icons-name"></i></label>
+									<input placeholder="Enrollment ID" type="text" name="uid" id="uid" value={this.state.uid} onChange={this.handleChange}/>
 								</div>
 								<div className = "form-group">
 									<label htmlFor = "password"><i className = "vanvia vanvia-lock"></i></label>

@@ -29,9 +29,7 @@ export const createUser = (user) => {
                     'Accept': 'text/plain'                    
                 },
                 mode: 'cors',
-                username: user.username,
-                email: user.email,
-                uid: user.email,
+                uid: user.uid,
                 password: user.password
             }
         ).then( response => {                
@@ -52,8 +50,7 @@ export const registerUser = (user) => {
                     'Accept': 'text/plain'
                 },
                 mode: 'cors',
-                email: user.email,
-                uid: user.email,
+                uid: user.uid,
                 password: user.password
             }
         ).then( response => {
@@ -115,8 +112,7 @@ export const authenticateUser = (user) => {
                     'Accept': 'text/plain'
                 },
                 mode: 'cors',
-                email: user.email,
-                uid: user.email,
+                uid: user.uid,
                 password: user.password
             }
         ).then( response => {

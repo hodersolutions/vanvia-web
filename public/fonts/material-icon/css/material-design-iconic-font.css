@@ -436,10 +436,10 @@
 .vanvia-edit:before {
   content: '\f158';
 }
-.vanvia-email-open:before {
+.vanvia-uid-open:before {
   content: '\f159';
 }
-.vanvia-email:before {
+.vanvia-uid:before {
   content: '\f15a';
 }
 .vanvia-eye-off:before {
@@ -2767,10 +2767,10 @@
 .vanvia-edit:before {
   content: '\f158';
 }
-.vanvia-email-open:before {
+.vanvia-uid-open:before {
   content: '\f159';
 }
-.vanvia-email:before {
+.vanvia-uid:before {
   content: '\f15a';
 }
 .vanvia-eye-off:before {

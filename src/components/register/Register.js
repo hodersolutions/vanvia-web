@@ -7,7 +7,7 @@ class Register extends Component {
     constructor() {
 		super();
 		this.state = {
-			email: '',
+			uid: '',
 			password: ''
 		}
 		this.handleChange = this.handleChange.bind(this);
@@ -23,7 +23,7 @@ class Register extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();		
 		this.props.registerUser({
-			email: this.state.email,
+			uid: this.state.uid,
 			password: this.state.password
 		});
 	}
@@ -41,14 +41,10 @@ class Register extends Component {
 						<div className="signup-content">
 							<div className="signup-form">
 								<h2 className="form-title">Join us</h2>
-								<form method="POST" onSubmit={this.handleSubmit} className="register-form" id="register-form">
+								<form method="POST" onSubmit={this.handleSubmit} className="register-form" id="register-form">									
 									<div className="form-group">
-										<label htmlFor="name"><i className="vanvia vanvia-account material-icons-name"></i></label>
-										<input type="text" name="name" id="name" placeholder="Your Name"/>
-									</div>
-									<div className="form-group">
-										<label htmlFor="email"><i className="vanvia vanvia-email"></i></label>
-										<input type="text" name="email" id="email" placeholder="Your Email/UID" value={this.state.email} onChange={this.handleChange}/>
+										<label htmlFor="uid"><i className="vanvia vanvia-uid"></i></label>
+										<input type="text" name="uid" id="uid" placeholder="Enrollment ID" value={this.state.uid} onChange={this.handleChange}/>
 									</div>
 									<div className="form-group">
 										<label htmlFor="pass"><i className="vanvia vanvia-lock"></i></label>
