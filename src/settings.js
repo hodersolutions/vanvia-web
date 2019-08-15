@@ -13,7 +13,8 @@ export const settings = {
         username: "",
         password: "",
         domain: ''
-    }
+    },
+    productName: "academe"
 };
 
 export default settings;

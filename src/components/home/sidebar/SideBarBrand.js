@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import settings from '../../../settings';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
 
@@ -20,7 +21,7 @@ class SideBarBrand extends Component {
             <div className="sidebar-brand">
                 <img className="img-responsive img-rounded dashboard-logo" src={require("../../../static/images/logo/logo.png")}
                     alt="Logo"/>
-                <Link to="/">VanVia</Link>
+                <Link to="/">{ settings.productName }</Link>
                 <div id="close-sidebar">
                 <i className="fas fa-times"></i>
                 </div>
