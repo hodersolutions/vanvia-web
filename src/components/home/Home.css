@@ -61,6 +61,10 @@
   
   /*----------------page-wrapper----------------*/
   
+  .institute-name {
+    text-transform: uppercase;
+  }
+
   .page-wrapper {
     height: 100vh;
   }

@@ -10,7 +10,7 @@ class InstituteHeader extends Component {
         return (
             <Fragment>
                 <nav className="navbar navbar-dark border-brand">
-                    <Link className="navbar-brand" to="#">
+                    <Link className="navbar-brand institute-name" to="#">
                         <img src={require("../../../static/images/institute.png")} width="30" height="30" style = { style } className="d-inline-block align-top" alt="InstituteLogo" />
                         { settings.instituteName }
                     </Link>
