@@ -85,9 +85,15 @@
   
   @media screen and (min-width: 768px) {
     .page-wrapper.toggled .page-content {
-      padding-left: 300px;
+      padding-left: 250px;
     }
   }
+
+  .border-brand {
+    background-color: #0E2828 !important;
+    border-radius: 0px 0px 5px 5px;
+  }
+
   /*----------------show sidebar button----------------*/
   #show-sidebar {
     position: fixed;
@@ -110,7 +116,7 @@
     top: 0;
     left: -300px;
     z-index: 999; 
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../static/images/sidebar/sidebar_4.jpg") !important;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../static/images/sidebar/sidebar_5.jpg") !important;
   }
   
   .sidebar-wrapper ul {
@@ -355,13 +361,16 @@
     display: inline-block;
     width: 100%;
     padding-left: 0px;
-    padding-top: 20px;
   }
   
   .page-wrapper .page-content > div {
-    padding: 20px 40px;
+    padding: 0px 40px;
   }
   
+  .route-heading {
+    margin-top: 20px;
+  }
+
   .page-wrapper .page-content {
     overflow-x: hidden;
   }

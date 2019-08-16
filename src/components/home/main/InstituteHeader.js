@@ -9,9 +9,9 @@ class InstituteHeader extends Component {
         }
         return (
             <Fragment>
-                <nav class="navbar navbar-light bg-light">
-                    <Link class="navbar-brand" to="#">
-                        <img src={require("../../../static/images/institute.png")} width="30" height="30" style = { style } class="d-inline-block align-top" alt="InstituteLogo" />
+                <nav className="navbar navbar-dark border-brand">
+                    <Link className="navbar-brand" to="#">
+                        <img src={require("../../../static/images/institute.png")} width="30" height="30" style = { style } className="d-inline-block align-top" alt="InstituteLogo" />
                         { settings.instituteName }
                     </Link>
                 </nav>
