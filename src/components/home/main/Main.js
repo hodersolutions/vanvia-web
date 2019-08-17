@@ -12,7 +12,7 @@ class Main extends Component {
                         <hr/>
                         <div className="row">
                             <div className="form-group col-md-12">
-                            <p>
+                            <p align="justify">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis magna semper, interdum tellus ut, tempus nulla. Sed neque ex, viverra vitae auctor vel, semper sed erat. Fusce eleifend turpis turpis, ac ornare nunc fermentum non. In quam lacus, laoreet vel vestibulum ac, dictum a nisl. Donec nec faucibus justo, id pharetra elit. Cras malesuada iaculis velit sed gravida. Nullam volutpat eros nec felis volutpat, a ultricies urna vulputate. Aliquam porta sodales justo id finibus. Curabitur tempus nisl at massa elementum euismod. Curabitur mollis tempus eros, at lobortis velit vehicula a.
 
                                 Vivamus cursus est augue, sit amet rhoncus lorem elementum a. Sed iaculis fringilla massa, quis viverra dolor vehicula molestie. Nam dui ante, imperdiet id malesuada at, aliquam quis tellus. Proin luctus imperdiet mauris feugiat pellentesque. Nulla efficitur ipsum sit amet condimentum accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque erat nisi, mattis ut vulputate sit amet, posuere in erat.
