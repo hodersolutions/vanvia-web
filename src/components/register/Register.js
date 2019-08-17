@@ -40,7 +40,7 @@ class Register extends Component {
 					<div className="container">
 						<div className="signup-content">
 							<div className="signup-form">
-								<h2 className="form-title">Join us</h2>
+								<h2 className="form-title">Enroll with us</h2>
 								<form method="POST" onSubmit={this.handleSubmit} className="register-form" id="register-form">									
 									<div className="form-group">
 										<label htmlFor="uid"><i className="vanvia vanvia-uid"></i></label>
