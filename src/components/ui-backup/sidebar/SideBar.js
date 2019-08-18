@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './SideBar.css';
 import './SideBarjQuery.js';
 
-export default class VanViaBar extends Component {
+export default class AcademeBar extends Component {
   render() {
     return (
         <Fragment>
@@ -212,7 +212,7 @@ export default class VanViaBar extends Component {
 					</nav>
 					<main className="page-content">
 						<div className="container-fluid">
-						<h2>VanVia Application Content</h2>
+						<h2>Academe Application Content</h2>
 						<hr/>
 						<div className="row">
 							<div className="form-group col-md-12">
