@@ -45,11 +45,11 @@ class SignIn extends Component {
 							<h2 className = "form-title">Sign in</h2>
 							<form method="POST" action="" onSubmit={this.handleSubmit} className = "register-form" id="login-form">
 								<div className = "form-group">
-									<label htmlFor = "uid"><i className = "vanvia vanvia-account material-icons-name"></i></label>
+									<label htmlFor = "uid"><i className = "academe academe-account material-icons-name"></i></label>
 									<input placeholder="Enrollment ID" type="text" name="uid" id="uid" value={this.state.uid} onChange={this.handleChange}/>
 								</div>
 								<div className = "form-group">
-									<label htmlFor = "password"><i className = "vanvia vanvia-lock"></i></label>
+									<label htmlFor = "password"><i className = "academe academe-lock"></i></label>
 									<input type="password" name="password" id="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
 								</div>
 								<div className = "form-group">

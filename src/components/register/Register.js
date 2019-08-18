@@ -43,15 +43,15 @@ class Register extends Component {
 								<h2 className="form-title">Enroll with us</h2>
 								<form method="POST" onSubmit={this.handleSubmit} className="register-form" id="register-form">									
 									<div className="form-group">
-										<label htmlFor="uid"><i className="vanvia vanvia-uid"></i></label>
+										<label htmlFor="uid"><i className="academe academe-uid"></i></label>
 										<input type="text" name="uid" id="uid" placeholder="Enrollment ID" value={this.state.uid} onChange={this.handleChange}/>
 									</div>
 									<div className="form-group">
-										<label htmlFor="pass"><i className="vanvia vanvia-lock"></i></label>
+										<label htmlFor="pass"><i className="academe academe-lock"></i></label>
 										<input type="password" name="password" id="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
 									</div>
 									<div className="form-group">
-										<label htmlFor="re-pass"><i className="vanvia vanvia-lock-outline"></i></label>
+										<label htmlFor="re-pass"><i className="academe academe-lock-outline"></i></label>
 										<input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
 									</div>
 									<div className="form-group">
