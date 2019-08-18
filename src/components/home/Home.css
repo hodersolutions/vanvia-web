@@ -441,7 +441,7 @@
   .chiller-theme .sidebar-wrapper .sidebar-header,
   .chiller-theme .sidebar-wrapper .sidebar-search,
   .chiller-theme .sidebar-wrapper .sidebar-menu {
-      border-top: 1px solid #3a3f48;
+      border-top: 1px solid #2C5364; /* CSS for divider lines in sidebar */
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
@@ -502,6 +502,12 @@
       background: #3a3f48;
   }
   
+/*----------------------------- remove this if you do not want gradient for sub-menu --------------------------*/
+  .sidebar-submenu {
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027) !important; /* #3a3f48; */
+  }
+/*----------------------------- remove this if you do not want gradient for sub-menu --------------------------*/
+
   .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
       color: #B2BABB /* #6c7b88 */;
       font-size: 15px;
@@ -509,9 +515,10 @@
   }
   
   .chiller-theme .sidebar-footer {
-      background: #3a3f48;
+      background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* #3a3f48; */
       box-shadow: 0px -1px 5px #282c33;
-      border-top: 1px solid #464a52;
+      border-radius: 0px 0px 5px 0px;
+      border-top: 1px solid #2C5364;
   }
   
   .chiller-theme .sidebar-footer>a:first-child {
