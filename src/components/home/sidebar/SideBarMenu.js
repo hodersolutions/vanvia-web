@@ -6,12 +6,14 @@ import SideBarDropDown from './SideBarDropDown';
 import {GET_USER_MENU_SUCCESS} from '../../../store/types/userTypes';
 
 class SideBarMenu extends Component {
-    componentDidMount() {        
-        this.props.getMenu({
-			uid: this.props.user.current_user["uid"],
-            role_keyword: this.props.user.current_user["roles"][0]["keyword"],
-            access_token: this.props.user.access_token
-		});
+    componentDidMount() {
+        if (this.props.user.menu === null) {
+            this.props.getMenu({
+                uid: this.props.user.current_user["uid"],
+                role_keyword: this.props.user.current_user["roles"][0]["keyword"],
+                access_token: this.props.user.access_token
+            });
+        }        
     }
     
     renderMenu() {
