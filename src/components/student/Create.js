@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class CreateStudent extends Component {
   render() {
     return (
-        <div className="container-fluid">            
+        <div className="container-fluid academe-form">            
             <form action="">
                 <div className="row row-gap">
                     <div className="col-md-3">

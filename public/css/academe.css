@@ -1,3 +1,8 @@
+.academe-form {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
 /******************* Buttons ************************/
 .form-submit {
     display: inline-block;
