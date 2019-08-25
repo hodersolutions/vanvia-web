@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getMenu } from '../../../store/actions/userActions';
-import Loading from '../../common/loading/Loading';
+import LoadingInner from '../../common/loading/LoadingInner';
 import SideBarDropDown from './SideBarDropDown';
 import {GET_USER_MENU_SUCCESS} from '../../../store/types/userTypes';
 
@@ -18,7 +18,7 @@ class SideBarMenu extends Component {
     
     renderMenu() {
 		if(this.props.user.loading) {
-			return (<Loading />);
+			return (<LoadingInner />);
 		} 
 		else if (this.props.user.status === GET_USER_MENU_SUCCESS){
             let menus = Object.entries(this.props.user.menu);

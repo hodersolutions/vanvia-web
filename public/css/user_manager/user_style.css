@@ -202,7 +202,7 @@ body {
   font-weight: 400;
   font-family: Poppins; }
 
-.container {
+.user-container {
   width: 900px;
   background: #fff;
   margin: 0 auto;
@@ -273,23 +273,6 @@ body {
 figure {
   margin-bottom: 50px;
   text-align: center; }
-
-.form-submit {
-  display: inline-block;
-  background: #6dabe4;
-  color: #fff;
-  border-bottom: none;
-  width: auto;
-  padding: 15px 39px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  margin-top: 25px;
-  cursor: pointer; }
-  .form-submit:hover {
-    background: #4292dc; }
 
 #signin {
   margin-top: 16px; }
@@ -399,7 +382,7 @@ input[type=checkbox]:not(old):checked + label > span:before {
   display: inline-block;
   width: auto; }
 
-label {
+.user-label {
   position: absolute;
   left: 0;
   top: 50%;
@@ -410,10 +393,10 @@ label {
   -ms-transform: translateY(-50%);
   color: #222; }
 
-.label-has-error {
+.user-label-has-error {
   top: 22%; }
 
-label.error {
+.user-label.error {
   position: relative;
   background: url("../images/unchecked.gif") no-repeat;
   background-position-y: 3px;
@@ -421,7 +404,7 @@ label.error {
   display: block;
   margin-top: 20px; }
 
-label.valid {
+.user-label.valid {
   display: block;
   position: absolute;
   right: 0;
@@ -430,7 +413,7 @@ label.valid {
   width: 20px;
   height: 20px;
   background: transparent; }
-  label.valid:after {
+.user-label.valid:after {
     font-family: 'Material-Design-Iconic-Font';
     content: '\f269';
     width: 100%;
@@ -440,7 +423,7 @@ label.valid {
     font-size: 16px;
     color: green; }
 
-.label-agree-term {
+.user-label-agree-term {
   position: relative;
   top: 0%;
   transform: translateY(0);
@@ -518,11 +501,11 @@ label.valid {
   margin-top: 10px; }
 
 @media screen and (max-width: 1200px) {
-  .container {
+  .user-container {
     width: calc( 100% - 30px);
     max-width: 100%; } }
 @media screen and (min-width: 1024px) {
-  .container {
+  .user-container {
     max-width: 1200px; } }
 @media screen and (max-width: 768px) {
   .signup-content, .signin-content {

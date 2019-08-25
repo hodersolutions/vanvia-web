@@ -1,0 +1,215 @@
+/******************* Buttons ************************/
+.form-submit {
+    display: inline-block;
+    background: #6dabe4;
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer; 
+}
+
+.form-submit:hover {
+      background: #4292dc; 
+}
+  
+.academe-btn-success {
+    display: inline-block;
+    background: #28B463;
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer; 
+}
+
+.academe-btn-success:hover {
+    background: #239B56; 
+}
+
+.academe-btn-primary {
+    display: inline-block;
+    background: #6dabe4;
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer; 
+}
+
+.academe-btn-primary:hover {
+    background: #4292dc; 
+}
+
+.academe-btn-basic {
+    display: inline-block;
+    background: #839192;
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer; 
+}
+
+.academe-btn-basic:hover {
+    background: #717D7E; 
+}
+
+.academe-btn-danger {
+    display: inline-block;
+    background: #CB4335;
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer; 
+}
+
+.academe-btn-danger:hover {
+    background: #B03A2E; 
+}
+
+/****************************** Others *******************************/
+#dob[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  96% 50% no-repeat ;
+}
+#dob[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+#dob[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+@media screen and (max-width: 767px) {
+    .nav > li {
+      display: inline-block !important;
+    }
+}
+
+/******************* input ************************************/
+.academe-input-text {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;
+    border: 1px solid #999;
+    border-radius: 2px;    
+    font-family: Poppins;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/******************* select ************************************/
+
+.academe-select {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;
+    border: 1px solid #999;
+    border-radius: 2px;    
+    font-family: Poppins;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/******************* date ************************************/
+
+.academe-date {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;
+    border: 1px solid #999;
+    border-radius: 2px;    
+    font-family: Poppins;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/******************* date ************************************/
+
+.academe-email {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;
+    border: 1px solid #999;
+    border-radius: 2px;    
+    font-family: Poppins;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/******************* textarea ************************************/
+
+.academe-textarea {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;
+    border: 1px solid #999;
+    border-radius: 2px;    
+    font-family: Poppins;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/******************* file ************************************/
+
+.academe-form-file {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;
+    font-family: Poppins;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/******************* label ************************************/
+
+.academe-form-label {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px 2px 4px 2px;    
+    font-family: Poppins;
+    font-size: 13px;  
+    font-weight: 600;  
+}
+
+/*********************** container row ************************/
+.row-gap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

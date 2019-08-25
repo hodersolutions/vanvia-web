@@ -6,6 +6,7 @@ const Home = lazy(() => import("../home/Home"));
 const NotFound = lazy(() => import('../common/notfound/NotFound'));
 const SignIn = lazy(() => import('../signin/SignIn'));
 const Register = lazy(() => import('../register/Register'));
+const CreateStudent = lazy(() => import('../student/Create'));
 
 const Routes = () => (
 	<div className='style'>
@@ -15,6 +16,7 @@ const Routes = () => (
 				<Route exact path='/signin' component={SignIn} />
 				<Route exact path='/register' component={Register} />
 				<Route exact path='/loading' component={Loading} />
+				<Route exact path='/create-student' component={CreateStudent} />
 
 				<Route path='*' component={ NotFound } />
 			</Switch>

@@ -4,3 +4,17 @@
     height: 25px;
     margin-right: 10px;
 }
+
+.loading-container {
+    background-color: #fff;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-container-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
